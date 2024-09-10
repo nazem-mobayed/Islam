@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="القرآن الكريم، Quran, إسلام، كتاب الله">
+        <meta name="description" content="موقع إسلام : اقرأ القرآن الكريم، استمع له و حمله">
+        <meta name="author" content="Nazem Wael Moubayed">
+        <link rel="icon" type="image/jpeg" href="favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Islam | Quran </title>
+  
+  <!-- Files -->
+  <script src="https://kit.fontawesome.com/d31dcbe67f.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="cdn_modules/axios@1.7.4/axios.min.js"></script>
+  <script type="text/javascript" src="cdn_modules/jquery@3.7.1/jquery.min.js"></script>
+  <script src="Controller.js"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="Quran-page-style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+</head>
+
+<body dir="rtl" translate="no">
+  <!-- loading project-->
+  
+  <div class="loading">
+    <span class="load">
+      <b class="fas fa-spinner fa-pulse"></b>
+    </span>
+  </div>
+  <!-- Project -->  
+  <div class="search-surrah" align="center" >
+    <button onclick="search()" class="closeSearch">X</button>
+<button onclick="next('open',0)">١- الفاتحة</button><br>
+<button onclick="next('open',1)">٢- البقرة</button><br>
+<button onclick="next('open',2)">٣- آل عمران</button><br>
+<button onclick="next('open',3)">٤- النساء</button><br>
+<button onclick="next('open',4)">٥- المائدة</button><br>
+<button onclick="next('open',5)">٦- الأنعام</button><br>
+<button onclick="next('open',6)">٧- الأعراف</button><br>
+<button onclick="next('open',7)">٨- الأنفال</button><br>
+<button onclick="next('open',8)">٩- التوبة</button><br>
+<button onclick="next('open',9)">١٠- يونس</button><br>
+<button onclick="next('open',10)">١١- هود</button><br>
+<button onclick="next('open',11)">١٢- يوسف</button><br>
+<button onclick="next('open',12)">١٣- الرعد</button><br>
+<button onclick="next('open',13)">١٤- إبراهيم</button><br>
+<button onclick="next('open',14)">١٥- الحجر</button><br>
+<button onclick="next('open',15)">١٦- النحل</button><br>
+<button onclick="next('open',16)">١٧- الإسراء</button><br>
+<button onclick="next('open',17)">١٨- الكهف</button><br>
+<button onclick="next('open',18)">١٩- مريم</button><br>
+<button onclick="next('open',19)">٢٠- طه</button><br>
+<button onclick="next('open',20)">٢١- الأنبياء</button><br>
+<button onclick="next('open',21)">٢٢- الحج</button><br>
+<button onclick="next('open',22)">٢٣- المؤمنون</button><br>
+<button onclick="next('open',23)">٢٤- النور</button><br>
+<button onclick="next('open',24)">٢٥- الفرقان</button><br>
+<button onclick="next('open',25)">٢٦- الشعراء</button><br>
+<button onclick="next('open',26)">٢٧- النمل</button><br>
+<button onclick="next('open',27)">٢٨- القصص</button><br>
+<button onclick="next('open',28)">٢٩- العنكبوت</button><br>
+<button onclick="next('open',29)">٣٠- الروم</button><br>
+<button onclick="next('open',30)">٣١- لقمان</button><br>
+<button onclick="next('open',31)">٣٢- السجدة</button><br>
+<button onclick="next('open',32)">٣٣- الأحزاب</button><br>
+<button onclick="next('open',33)">٣٤- سبأ</button><br>
+<button onclick="next('open',34)">٣٥- فاطر</button><br>
+<button onclick="next('open',35)">٣٦- يس</button><br>
+<button onclick="next('open',36)">٣٧- الصافات</button><br>
+<button onclick="next('open',37)">٣٨- ص</button><br>
+<button onclick="next('open',38)">٣٩- الزمر</button><br>
+<button onclick="next('open',39)">٤٠- غافر</button><br>
+<button onclick="next('open',40)">٤١- فصلت</button><br>
+<button onclick="next('open',41)">٤٢- الشورى</button><br>
+<button onclick="next('open',42)">٤٣- الزخرف</button><br>
+<button onclick="next('open',43)">٤٤- الدخان</button><br>
+<button onclick="next('open',44)">٤٥- الجاثية</button><br>
+<button onclick="next('open',45)">٤٦- الأحقاف</button><br>
+<button onclick="next('open',46)">٤٧- محمد</button><br>
+<button onclick="next('open',47)">٤٨- الفتح</button><br>
+<button onclick="next('open',48)">٤٩- الحجرات</button><br>
+<button onclick="next('open',49)">٥٠- ق</button><br>
+<button onclick="next('open',50)">٥١- الذاريات</button><br>
+<button onclick="next('open',51)">٥٢- الطور</button><br>
+<button onclick="next('open',52)">٥٣- النجم</button><br>
+<button onclick="next('open',53)">٥٤- القمر</button><br>
+<button onclick="next('open',54)">٥٥- الرحمن</button><br>
+<button onclick="next('open',55)">٥٦- الواقعة</button><br>
+<button onclick="next('open',56)">٥٧- الحديد</button><br>
+<button onclick="next('open',57)">٥٨- المجادلة</button><br>
+<button onclick="next('open',58)">٥٩- الحشر</button><br>
+<button onclick="next('open',59)">٦٠- الممتحنة</button><br>
+<button onclick="next('open',60)">٦١- الصف</button><br>
+<button onclick="next('open',61)">٦٢- الجمعة</button><br>
+<button onclick="next('open',62)">
+  ٦٣- المنافقون
+  </button><br>
+<button onclick="next('open',63)">٦٤- التغابن</button><br>
+<button onclick="next('open',64)">٦٥- الطلاق</button><br>
+<button onclick="next('open',65)">٦٦- التحريم</button><br>
+<button onclick="next('open',66)">٦٧- الملك</button><br>
+<button onclick="next('open',67)">٦٨- القلم</button><br>
+<button onclick="next('open',68)">٦٩- الحاقة</button><br>
+<button onclick="next('open',69)">٧٠- المعارج</button><br>
+<button onclick="next('open',70)">٧١- نوح</button><br>
+<button onclick="next('open',71)">٧٢- الجن</button><br>
+<button onclick="next('open',72)">٧٣- المزمل</button><br>
+<button onclick="next('open',73)">٧٤- المدثر</button><br>
+<button onclick="next('open',74)">٧٥- القيامة</button><br>
+<button onclick="next('open',75)">٧٦- الإنسان</button><br>
+<button onclick="next('open',76)">٧٧- المرسلات</button>
+<br><button onclick="next('open',77)">٧٨- النبأ</button><br>
+<button onclick="next('open',78)">٧٩- النازعات</button><br>
+<button onclick="next('open',79)">٨٠- عبس</button><br>
+<button onclick="next('open',80)">٨١- التكوير</button><br>
+<button onclick="next('open',81)">٨٢- الانفطار</button>
+<br><button onclick="next('open',82)">
+  ٨٣- المطففين
+  </button><br>
+<button onclick="next('open',83)">٨٤- الإنشقاق</button><br>
+<button onclick="next('open',84)">٨٥- البروج</button><br>
+<button onclick="next('open',85)">٨٦- الطارق</button><br>
+<button onclick="next('open',86)">٨٧- الأعلى</button><br>
+<button onclick="next('open',87)">٨٨- الغاشية</button><br>
+<button onclick="next('open',88)">٨٩- الفجر</button><br>
+<button onclick="next('open',89)">٩٠- البلد</button><br>
+<button onclick="next('open',90)">٩١- الشمس</button><br>
+<button onclick="next('open',91)">٩٢- الليل</button><br>
+<button onclick="next('open',92)">
+  ٩٣- الضحى
+  </button><br>
+<button onclick="next('open',93)">٩٤- الشرح</button><br>
+<button onclick="next('open',94)">٩٥- التين</button><br>
+<button onclick="next('open',95)">٩٦- العلق</button><br>
+<button onclick="next('open',96)">٩٧- القدر</button><br>
+<button onclick="next('open',97)">٩٨- البينة</button><br>
+<button onclick="next('open',98)">٩٩- الزلزلة</button><br>
+<button onclick="next('open',99)">١٠٠- العاديات</button><br>
+<button onclick="next('open',100)">١٠١- القارعة</button><br>
+<button onclick="next('open',101)">١٠٢- التكاثر</button><br>
+<button onclick="next('open',102)">١٠٣- العصر</button><br>
+<button onclick="next('open',103)">١٠٤- الهمزة</button><br>
+<button onclick="next('open',104)">١٠٥- الفيل</button><br>
+<button onclick="next('open',105)">١٠٦- قريش</button><br>
+<button onclick="next('open',106)">١٠٧- الماعون</button><br>
+<button onclick="next('open',107)">١٠٨- الكوثر</button><br>
+<button onclick="next('open',108)">١٠٩- الكافرون</button><br>
+<button onclick="next('open',109)">١١٠- النصر</button><br>
+<button onclick="next('open',110)">١١١- المسد</button><br>
+<button onclick="next('open',111)">١١٢- الإخلاص</button><br>
+<button onclick="next('open',112)">١١٣- الفلق</button><br>
+<button onclick="next('open',113)">١١٤- الناس</button><br>
+  </div>
+  <div class="surrah" align="center">
+    <h3 class="name" onclick="search()"></h3>
+    <div align="right" dir="rtl" style="padding:0px 10% 0px 10%;">
+    <button onclick="previous('surrah')" class="np"><</button>
+    <span id="surrahNo"></span>
+    <span id="ayatNo"></span> 
+    <button onclick="next('surrah')" class="np">></button>
+    </div><br>
+    <div class="content" align="center" dir="rtl">
+      <button onclick="play()" dir="rtl">
+        <strong class="fas fa-headphones"></strong>
+        <b id="playAudio">
+        شغل الصوت
+        </b>
+      </button>
+      <h4></h4>
+      <div class="ayat" align="right" dir="rtl"></div>
+      </div><br>
+    <button onclick="previous('page')" class="np"><</button>
+    <span id="pages" onclick="lastPage()"></span>
+    <button onclick="next('page')" class="np">></button>
+    <button onclick="whichCommand()" class="np">
+      <i class="fas fa-bookmark" id="mark"></i>
+    </button>
+  </div>
+  <!-- bookmark options -->
+  <div class="bookmark-options">
+    <center>
+    <button class="cancel" onclick="cancel()">
+      X
+    </button>
+    <button onclick="bookmarkOption(1)">
+      <span class="fas fa-bookmark"></span>
+      أضف إشارة مرجعية
+    </button>
+    <br>
+    <button onclick="bookmarkOption(2)">
+      <span class="fas fa-book-open"></span>
+      انتقل إلى الإشارة المرجعية
+    </button>
+    </center>
+  </div>
+  <!-- alert -->
+  <div class="alertMessage">
+    <b class="material-icons"  style="font-size:18pt;">signal_wifi_off</b>&nbsp;&nbsp;
+    <font id="alert">
+      لا يوجد اتصال بالانترنت
+    </font>
+  </div>
+  <!-- audio player -->
+  <div class="audio-player" dir="ltr">
+    <div align="center">
+    <select onchange="setSheikh(this.value)">
+      <option value="1">
+        عبد الباسط عبد الصمد (مجود)
+      </option>
+      <option value="2">
+        عبد الباسط عبد الصمد (مرتل)
+      </option>
+      <option value="3">
+        عبد الرحمن السديس (مرتل)
+      </option>
+      <option value="4">
+        أبو بكر الشاطري (مرتل)
+      </option>
+      <option value="5">
+        هاني الرفاعي (مرتل)
+      </option>
+      <option value="6">
+        خليل الحصري (مرتل)
+      </option>
+      <option value="7">
+        مشاري راشد العفاسي (مرتل)
+      </option>
+      <option value="9">
+        محمد صديق المنشاوي (مرتل)
+      </option>
+    </select>
+    </div>
+    <audio controls>
+      <source>
+      your browser doesn't support audio
+    </audio>
+  </div>
+  <script>
+    window.addEventListener('online',()=>{
+      showMessage(true)
+    })
+    window.addEventListener('offline',()=>{
+      showMessage(false)
+    })
+  </script>
+</body>
+</html>
